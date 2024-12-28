@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data from DataGov - Bus Fleet</title>
+</head>
+<body>
+    <h1>Data from DataGov - Bus Fleet(ציי רכב אוטובוסים)</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>_id</th>
+                <th>operator_nm</th>
+                <th>cluster_nm</th>
+                <th>bus_license_id</th>
+                <th>stone_proof_nm</th>
+                <th>bullet_proof_nm</th>
+                <th>BusSize_nm</th>
+                <th>BusType_nm</th>
+                <th>SeatsNum</th>
+                <th>production_year</th>
+                <th>production_country</th>
+                <th>PropulsionType_nm</th>
+                <th>total_kilometer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(item => { %>
+                <tr>
+                    <td><%= item._id %></td>
+                    <td><%= item.operator_nm %></td>
+                    <td><%= item.cluster_nm %></td>
+                    <td><%= item.bus_license_id %></td>
+                    <td><%= item.stone_proof_nm %></td>
+                    <td><%= item.bullet_proof_nm %></td>
+                    <td><%= item.BusSize_nm %></td>
+                    <td><%= item.BusType_nm %></td>
+                    <td><%= item.SeatsNum %></td>
+                    <td><%= item.production_year %></td>
+                    <td><%= item.production_country %></td>
+                    <td><%= item.PropulsionType_nm %></td>
+                    <td><%= item.total_kilometer %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
